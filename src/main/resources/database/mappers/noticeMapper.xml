@@ -13,7 +13,7 @@
 		delete board where num = #{num}
 	</delete>
 
-	<select id="getSelect" parameterType="NoticeDTO" resultType="NoticeDTO">
+	<select id="getOne" parameterType="NoticeDTO" resultType="NoticeDTO">
 		select * from board where num = #{num}
 	</select>
 

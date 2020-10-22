@@ -53,16 +53,16 @@
 		, #{title}, #{writer}, #{contents}, sysdate, 0, qna_seq2.currval, 0, 0)
 	</insert>
 	
-	<update id="setReplyUpdate" parameterType="QnaDTO">
+	<update id="qnaReplyUpdate" parameterType="QnaDTO">
 		update qna set step=step+1 where ref=#{ref} and step>#{step}
 	</update>
 	
-	<insert id="setReply" parameterType="QnaDTO">
+	<insert id="qnaReply" parameterType="QnaDTO">
 		insert into qna values(qna_seq2.nextval
 		, #{title}, #{writer}, #{contents}, sysdate, 0, #{ref}, #{step}, #{depth})
 	</insert>
 	
-	<select id="getSelect" parameterType="QnaDTO" resultType="QnaDTO">
+	<select id="getOne" parameterType="QnaDTO" resultType="QnaDTO">
 		select *  from qna where num =#{num}
 	</select>
 	
