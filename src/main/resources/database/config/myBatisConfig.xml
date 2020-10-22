@@ -11,6 +11,8 @@
 		
 		<typeAlias type="com.asd.s4.board.qna.QnaDTO" alias="QnaDTO"/>
 		
+		<typeAlias type="com.asd.s4.util.Pager" alias="Pager"/>
+		
 	</typeAliases>
   
   </configuration>
